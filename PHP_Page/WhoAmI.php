@@ -1,8 +1,6 @@
 <html>
     <head>
         <title>PHP Page Assignment</title>
-
-        <!-- Bootstrap CSS used for styling -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     </head>
 
@@ -95,7 +93,7 @@
                             </select>
                         </div>
 
-                        <input type="submit" class="btn btn-primary">
+                        <input type="submit" class="btn btn-primary">Submit</input>
                     </form>
                 </div>
             </div>
