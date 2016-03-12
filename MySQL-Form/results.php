@@ -31,6 +31,7 @@
             $address = $_POST['address'];
             $city = $_POST['city'];
             $state = $_POST['state'];
+            $zip = $_POST['zip'];
             $birthday = $_POST['year'] . '-' . $_POST['month'] . '-' . $_POST['day'];
             $username = $_POST['username'];
             $password = $_POST['password']; // I know this is really bad!
@@ -39,8 +40,8 @@
 
             if ($_POST['button_create'] != '')
             {
-                if ($first_name == '' || $last_name == '' || $phone == '' || $address == '' || $city = '' || $state == '' || $_POST['year'] == ''
-                        || $_POST['month'] == '' || $_POST['day'] == '' || $username == '' || $password == '' || $sex == '' || $relationship == '') {
+                if ($first_name == '' || $last_name == '' || $phone == '' || $address == '' || $city == '' || $state == '' || $_POST['year'] == ''
+                        || $_POST['month'] == '' || $_POST['day'] == '' || $zip == '' || $username == '' || $password == '' || $sex == '' || $relationship == '') {
 
                     $message = 'Please fill out all of the fields.';
                     echo $message;
@@ -178,13 +179,13 @@
                             $results[] = $res;
                     };
 
-                    if (!$results) {
-                        echo "<h2>No Results Found</h2>";
-                        echo "<p>No results were found for {$first_name} {$last_name}</p>";
-                        die();
-                    } else {
-                        return $results;
-                    }
+                        if (!$results) {
+                            echo "<h2>No Results Found</h2>";
+                            echo "<p>No results were found for {$first_name} {$last_name}</p>";
+                            die();
+                        } else {
+                            return $results;
+                        }
 
             }
         }
